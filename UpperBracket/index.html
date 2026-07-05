@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MyTicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<span id="team" style="display:none;"></span>
+
+<img id="topimage">
+
+<!-- BRACKET ONLY -->
+<div class="bracket">
+
+    <div class="round round1">
+        <span id="Round1" class="roundtitle"></span>
+
+        <div id="matchA">
+            <div id="A"></div>
+            <div id="ABlue"></div>
+            <div id="AOrange"></div>
+            <div id="ABlueScore"></div>
+            <div id="AOrangeScore"></div>
+        </div>
+
+        <div id="matchB">
+            <div id="B"></div>
+            <div id="BBlue"></div>
+            <div id="BOrange"></div>
+            <div id="BBlueScore"></div>
+            <div id="BOrangeScore"></div>
+        </div>
+
+        <div id="matchC">
+            <div id="C"></div>
+            <div id="CBlue"></div>
+            <div id="COrange"></div>
+            <div id="CBlueScore"></div>
+            <div id="COrangeScore"></div>
+        </div>
+
+        <div id="matchD">
+            <div id="D"></div>
+            <div id="DBlue"></div>
+            <div id="DOrange"></div>
+            <div id="DBlueScore"></div>
+            <div id="DOrangeScore"></div>
+        </div>
+
+        <div id="matchE">
+            <div id="E"></div>
+            <div id="EBlue"></div>
+            <div id="EOrange"></div>
+            <div id="EBlueScore"></div>
+            <div id="EOrangeScore"></div>
+        </div>
+
+        <div id="matchF">
+            <div id="F"></div>
+            <div id="FBlue"></div>
+            <div id="FOrange"></div>
+            <div id="FBlueScore"></div>
+            <div id="FOrangeScore"></div>
+        </div>
+
+        <div id="matchG">
+            <div id="G"></div>
+            <div id="GBlue"></div>
+            <div id="GOrange"></div>
+            <div id="GBlueScore"></div>
+            <div id="GOrangeScore"></div>
+        </div>
+
+        <div id="matchH">
+            <div id="H"></div>
+            <div id="HBlue"></div>
+            <div id="HOrange"></div>
+            <div id="HBlueScore"></div>
+            <div id="HOrangeScore"></div>
+        </div>
+    </div>
+
+    <!-- QUARTERFINALS -->
+    <div class="round round2">
+        <span id="Quarterfinals" class="roundtitle"></span>
+
+        <div id="matchI">
+            <div id="I"></div>
+            <div id="IBlue"></div>
+            <div id="IOrange"></div>
+            <div id="IBlueScore"></div>
+            <div id="IOrangeScore"></div>
+        </div>
+
+        <div id="matchJ">
+            <div id="J"></div>
+            <div id="JBlue"></div>
+            <div id="JOrange"></div>
+            <div id="JBlueScore"></div>
+            <div id="JOrangeScore"></div>
+        </div>
+
+        <div id="matchK">
+            <div id="K"></div>
+            <div id="KBlue"></div>
+            <div id="KOrange"></div>
+            <div id="KBlueScore"></div>
+            <div id="KOrangeScore"></div>
+        </div>
+
+        <div id="matchL">
+            <div id="L"></div>
+            <div id="LBlue"></div>
+            <div id="LOrange"></div>
+            <div id="LBlueScore"></div>
+            <div id="LOrangeScore"></div>
+        </div>
+    </div>
+
+    <!-- SEMIFINALS -->
+    <div class="round round3">
+        <span id="Semifinals" class="roundtitle"></span>
+
+        
+
+        <div id="matchM">
+            <div id="M"></div>
+            <div id="MBlue"></div>
+            <div id="MOrange"></div>
+            <div id="MBlueScore"></div>
+            <div id="MOrangeScore"></div>
+        </div>
+
+        <div id="matchN">
+            <div id="N"></div>
+            <div id="NBlue"></div>
+            <div id="NOrange"></div>
+            <div id="NBlueScore"></div>
+            <div id="NOrangeScore"></div>
+        </div>
+    </div>
+
+    <!-- QUALIFIED -->
+    <div class="round round4">
+        <span id="Qualified" class="roundtitle"></span>
+
+        <div id="matchW1">
+            <div id="W1"></div>
+        </div>
+
+        <div id="matchW2">
+            <div id="W2"></div>
+        </div>
+    </div>
+
+</div>
+
+<!-- TICKER ONLY -->
+<div class="marquee-container">
+    <div class="marquee">
+        <span id="ticker"></span>
+    </div>
+</div>
+
+<script src="ticker-logic.js"></script>
+<script src="Updater.js"></script>
+<script src="regex-operation.js"></script>
+
+<script>
+    const settings = {
+    string: {
+        M2: "team",
+
+        B5: "Round1",
+
+        B8: "A",
+        C8: "ABlue",
+        C9: "AOrange",
+        D8: "ABlueScore",
+        D9: "AOrangeScore",
+
+        B12: "B",
+        C12: "BBlue",
+        C13: "BOrange",
+        D12: "BBlueScore",
+        D13: "BOrangeScore",
+
+        B16: "C",
+        C16: "CBlue",
+        C17: "COrange",
+        D16: "CBlueScore",
+        D17: "COrangeScore",
+
+        B20: "D",
+        C20: "DBlue",
+        C21: "DOrange",
+        D20: "DBlueScore",
+        D21: "DOrangeScore",
+
+        B24: "E",
+        C24: "EBlue",
+        C25: "EOrange",
+        D24: "EBlueScore",
+        D25: "EOrangeScore",
+
+        B28: "F",
+        C28: "FBlue",
+        C29: "FOrange",
+        D28: "FBlueScore",
+        D29: "FOrangeScore",
+
+        B32: "G",
+        C32: "GBlue",
+        C33: "GOrange",
+        D32: "GBlueScore",
+        D33: "GOrangeScore",
+
+        B36: "H",
+        C36: "HBlue",
+        C37: "HOrange",
+        D36: "HBlueScore",
+        D37: "HOrangeScore",
+
+
+        G5: "Quarterfinals",
+
+        G10: "I",
+        H10: "IBlue",
+        H11: "IOrange",
+        I10: "IBlueScore",
+        I11: "IOrangeScore",
+
+        G18: "J",
+        H18: "JBlue",
+        H19: "JOrange",
+        I18: "JBlueScore",
+        I19: "JOrangeScore",
+
+        G26: "K",
+        H26: "KBlue",
+        H27: "KOrange",
+        I26: "KBlueScore",
+        I27: "KOrangeScore",
+
+        G34: "L",
+        H34: "LBlue",
+        H35: "LOrange",
+        I34: "LBlueScore",
+        I35: "LOrangeScore",
+
+
+        L5: "Semifinals",
+
+        L14: "M",
+        M14: "MBlue",
+        M15: "MOrange",
+        N14: "MBlueScore",
+        N15: "MOrangeScore",
+
+        L30: "N",
+        M30: "NBlue",
+        M31: "NOrange",
+        N30: "NBlueScore",
+        N31: "NOrangeScore",
+
+
+        R5: "Qualified",
+
+        R14: "W1",
+        R30: "W2"
+    }
+};
+
+    const spreadsheetID = '1D7LDvXXXAbJVpD88GmsmXg9bFgDwwveFDOMvgX4oat4';
+    const worksheetName = 'Double Elim Top 32';
+    const apiKey = 'AIzaSyByYOzOq1SV8-UmU5N3YnNlQPvoHkNv-60';
+
+    const updateInterval = 3000;
+
+    const u = new GraphicsUpdater(
+        settings,
+        spreadsheetID,
+        worksheetName,
+        apiKey,
+        updateInterval,
+        false
+    );
+
+    u.addOperation('regex', regexOperation);
+    u.startUpdating();
+
+    const ticker = new TickerUpdater(1000);
+
+    /* ===================== BRACKET IMAGE ===================== */
+
+    const teamElement = document.getElementById("team");
+    const topImage = document.getElementById("topimage");
+
+    function updateBracketImage() {
+        const team = teamElement.textContent.trim();
+
+        if (!team) {
+            topImage.removeAttribute("src");
+            return;
+        }
+
+        topImage.src = `ModularPieces/Teams/${team}/Double_Elim_Bracket.png`;
+    }
+
+    new MutationObserver(updateBracketImage).observe(teamElement, {
+        childList: true,
+        characterData: true,
+        subtree: true
+    });
+
+    updateBracketImage();
+</script>
+
+</body>
+</html>

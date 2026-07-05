@@ -1,0 +1,435 @@
+@font-face {
+    font-family: "OxaniumBold";
+    src: url("./fonts/Oxanium-Bold.ttf");
+}
+
+@font-face {
+    font-family: "OxaniumMedium";
+    src: url("./fonts/Oxanium-Medium.ttf");
+}
+
+@font-face {
+    font-family: "OxaniumLight";
+    src: url("./fonts/Oxanium-Light.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    color: white;
+    font-family: OxaniumBold;
+}
+
+/* ===================== BACKGROUND ===================== */
+
+#topimage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1920px;
+    height: 1080px;
+    z-index: 0;
+}
+
+/* ===================== BRACKET ===================== */
+
+.bracket {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+}
+
+/* ===================== ROUND CONTAINERS ===================== */
+
+.round {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+}
+
+.round1 {
+    left: 160px;
+    top: 40px;
+    gap: 26px;
+}
+
+.round2 {
+    left: 470px;
+    top: 40px;
+}
+
+.round3 {
+    left: 780px;
+    top: 40px;
+}
+
+.round4 {
+    left: 1205px;
+    top: 40px;
+}
+
+/* ===================== TITLE ===================== */
+
+.roundtitle {
+    margin-bottom: 30px;
+    font-family: OxaniumBold;
+    font-size: 34px;
+    color: white;
+    -webkit-text-stroke: 1.4px black;
+}
+
+/* ===================== MATCH CONTAINERS ===================== */
+
+#matchA { position: absolute; top: 102px; left: -19px; }
+#matchB { position: absolute; top: 218px; left: -19px; }
+#matchC { position: absolute; top: 335px; left: -19px; }
+#matchD { position: absolute; top: 451px; left: -19px; }
+#matchE { position: absolute; top: 581px; left: -19px; }
+#matchF { position: absolute; top: 698px; left: -19px; }
+#matchG { position: absolute; top: 815px; left: -19px; }
+#matchH { position: absolute; top: 931px; left: -19px; }
+#matchI { position: absolute; top: 10px; left: -19px; }
+#matchJ { position: absolute; top: 244px; left: -19px; }
+#matchK { position: absolute; top: 489px; left: -19px; }
+#matchL { position: absolute; top: 722px; left: -19px; }
+#matchM { position: absolute; top: 125px; left: -21px; }
+#matchN { position: absolute; top: 606px; left: -19px; }
+#matchW1 { position: absolute; top: 103px; left: -19px; }
+#matchW2 { position: absolute; top: 584px; left: -19px; }
+
+/* ===================== ROUND 1 ===================== */
+/* ===================== MATCH ID (A, B, C...) ===================== */
+
+#A, #B, #C, #D, #E, #F, #G, #H {
+    position: absolute;
+    left: 0;
+    top: 10px;
+
+    width: 28px;
+    text-align: center;
+
+    font-size: 40px;
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+/* ===================== BLUE TEAM ===================== */
+
+#ABlue, #BBlue, #CBlue, #DBlue,
+#EBlue, #FBlue, #GBlue, #HBlue {
+    position: absolute;
+    left: 46px;
+    top: -2px;
+
+    width: 150px;
+
+    font-size: 24px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+/* ===================== BLUE TEAM SCORE ===================== */
+#ABlueScore, #BBlueScore, #CBlueScore, #DBlueScore,
+#EBlueScore, #FBlueScore, #GBlueScore, #HBlueScore {
+    position: absolute;
+    left: 182px;
+    top: -10px;
+    text-align: center;
+
+    width: 80px;
+
+    font-size: 35px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+/* ===================== ORANGE TEAM ===================== */
+
+#AOrange, #BOrange, #COrange, #DOrange,
+#EOrange, #FOrange, #GOrange, #HOrange {
+    position: absolute;
+    left: 46px;
+    top: 46px;
+
+    width: 150px;
+
+    font-size: 24px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+/* ===================== ORANGE TEAM SCORE ===================== */
+#AOrangeScore, #BOrangeScore, #COrangeScore, #DOrangeScore,
+#EOrangeScore, #FOrangeScore, #GOrangeScore, #HOrangeScore {
+    position: absolute;
+    left: 182px;
+    top: 38px;
+    text-align: center;
+
+    width: 80px;
+
+    font-size: 35px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+
+/* ===================== ROUND 1 ===================== */
+/* ===================== MATCH ID (A, B, C...) ===================== */
+#I, #J, #K, #L {
+    position: absolute;
+    left: 0;
+    top: 160px;
+
+    width: 28px;
+    text-align: center;
+
+    font-size: 40px;
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+/* ===================== BLUE TEAM ===================== */
+#IBlue, #JBlue, #KBlue, #LBlue {
+    position: absolute;
+    left: 47px;
+    top: 147px;
+
+    width: 150px;
+
+    font-size: 24px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+/* ===================== BLUE TEAM SCORE ===================== */
+#IBlueScore, #JBlueScore, #KBlueScore, #LBlueScore {
+    position: absolute;
+    left: 182px;
+    top: 140px;
+    text-align: center;
+
+    width: 80px;
+
+    font-size: 35px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+/* ===================== ORANGE TEAM ===================== */
+#IOrange, #JOrange, #KOrange, #LOrange {
+    position: absolute;
+    left: 47px;
+    top: 196px;
+
+    width: 150px;
+
+    font-size: 24px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+/* ===================== ORANGE TEAM SCORE ===================== */
+#IOrangeScore, #JOrangeScore, #KOrangeScore, #LOrangeScore {
+    position: absolute;
+    left: 182px;
+    top: 188px;
+    text-align: center;
+
+    width: 80px;
+
+    font-size: 35px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+
+/* ===================== SEMIFINALS ===================== */
+/* ===================== MATCH ID (M, N...) ===================== */
+#M, #N {
+    position: absolute;
+    left: 0;
+    top: 160px;
+
+    width: 28px;
+    text-align: center;
+
+    font-size: 40px;
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+/* ===================== BLUE TEAM ===================== */
+#MBlue, #NBlue {
+    position: absolute;
+    left: 50px;
+    top: 148px;
+
+    width: 150px;
+
+    font-size: 24px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+/* ===================== BLUE TEAM SCORE ===================== */
+#MBlueScore, #NBlueScore {
+    position: absolute;
+    left: 184px;
+    top: 140px;
+    text-align: center;
+
+    width: 80px;
+
+    font-size: 35px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+/* ===================== ORANGE TEAM ===================== */
+#MOrange, #NOrange {
+    position: absolute;
+    left: 50px;
+    top: 196px;
+
+    width: 150px;
+
+    font-size: 24px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+/* ===================== ORANGE TEAM SCORE ===================== */
+#MOrangeScore, #NOrangeScore {
+    position: absolute;
+    left: 184px;
+    top: 188px;
+    text-align: center;
+
+    width: 80px;
+
+    font-size: 35px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+/* ===================== QUALIFIED ===================== */
+#W1, #W2 {
+    position: absolute;
+    left: -33px;
+    top: 188px;
+
+    text-align: center;
+
+    width: 255px;
+
+    font-size: 34px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    color: white;
+    -webkit-text-stroke: 1px black;
+}
+
+
+/* ===================== TICKER ===================== */
+
+.marquee-container {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 1920px;
+    overflow: hidden;
+    z-index: 5;
+}
+
+.marquee {
+    white-space: nowrap;
+}
+
+#ticker {
+    font-family: OxaniumLight;
+    font-size: 34px;
+    color: white;
+}
+
+/* ===================== ANIMATION ===================== */
+
+@keyframes marquee {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-130%);
+    }
+}

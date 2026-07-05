@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Breakticker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<span id="team" style="display:none;"></span>
+
+<img id="topimage">
+<img id="botimage">
+
+<div class="topdivstuff">
+
+    <span id="title"></span>
+    <span id="countdown"></span>
+
+    <p id="tickertime"></p>
+
+    <span id="timezone"></span>
+    <span id="timeformat" style="display:none;"></span>
+
+    <div class="upnext">
+        <span id="upnexttext"></span>
+        <span id="upnextvs"></span>
+        <img src="" id="upnextleftlogo" class="nextteamlogos">
+        <img src="" id="upnextrightlogo" class="nextteamlogos">
+    </div>
+
+    <!-- TOP FIXTURE -->
+    <div class="fixturestuff topstuff">
+        <span id="topround" class="topround"></span>
+
+        <span id="topleftteam" style="display:none;"></span>
+        <span id="toprightteam" style="display:none;"></span>
+
+        <span id="toptime" class="gametime"></span>
+        <span id="topscore" class="gamescore"></span>
+
+        <div class="teamlogos">
+            <img src="" id="topleftteamlogo" class="teamlogos teamlogoleft">
+            <img src="" id="toprightteamlogo" class="teamlogos teamlogoright">
+        </div>
+    </div>
+
+    <!-- MID FIXTURE -->
+    <div class="fixturestuff midstuff">
+        <span id="midround" class="midround"></span>
+
+        <span id="midleftteam" style="display:none;"></span>
+        <span id="midrightteam" style="display:none;"></span>
+
+        <span id="midtime" class="gametime"></span>
+        <span id="midscore" class="gamescore"></span>
+
+        <div class="teamlogos">
+            <img src="" id="midleftteamlogo" class="teamlogos teamlogoleft">
+            <img src="" id="midrightteamlogo" class="teamlogos teamlogoright">
+        </div>
+    </div>
+
+    <!-- BOTTOM FIXTURE -->
+    <div class="fixturestuff botstuff">
+        <span id="botround" class="botround"></span>
+
+        <span id="botleftteam" style="display:none;"></span>
+        <span id="botrightteam" style="display:none;"></span>
+
+        <span id="bottime" class="gametime"></span>
+        <span id="botscore" class="gamescore"></span>
+
+        <div class="teamlogos">
+            <img src="" id="botleftteamlogo" class="teamlogos teamlogoleft">
+            <img src="" id="botrightteamlogo" class="teamlogos teamlogoright">
+        </div>
+    </div>
+
+    <span id="social" class="social"></span>
+
+</div>
+
+<!-- MARQUEE / TICKER -->
+<div class="position-relative marquee-container d-none d-sm-block">
+    <div class="marquee d-flex justify-content-around">
+        <span id="ticker"></span>
+    </div>
+</div>
+
+<!-- SCRIPTS -->
+<script src="ticker-logic.js"></script>
+<script src="Updater.js"></script>
+<script src="regex-operation.js"></script>
+
+<script>
+    const settings = {
+        'string': {
+            'E19': 'team',
+            'B5': 'title',
+            'N3': 'ticker',
+
+
+            'J13': 'toptime',
+            'J14': 'midtime',
+            'J15': 'bottime',
+
+            'I13': 'topscore',
+            'I14': 'midscore',
+            'I15': 'botscore',
+
+            'B9': 'upnexttext',
+            'I9': 'upnextvs',
+
+            'B19': 'timezone',
+            'C19': 'timeformat',
+
+            'B13': 'topround',
+            'B14': 'midround',
+            'B15': 'botround',
+
+            'C13': 'topleftteam',
+            'H13': 'toprightteam',
+            'C14': 'midleftteam',
+            'H14': 'midrightteam',
+            'C15': 'botleftteam',
+            'H15': 'botrightteam',
+
+            'H19': 'social',
+
+        },
+        "image": {
+            'D9': 'upnextleftlogo',
+            'G9': 'upnextrightlogo',
+
+            'D13': 'topleftteamlogo',
+            'G13': 'toprightteamlogo',
+            'D14': 'midleftteamlogo',
+            'G14': 'midrightteamlogo',
+            'D15': 'botleftteamlogo',
+            'G15': 'botrightteamlogo',
+        }
+    };
+
+    const spreadsheetID = '1D7LDvXXXAbJVpD88GmsmXg9bFgDwwveFDOMvgX4oat4';
+    const worksheetName = 'Intermission Controller';
+    const apiKey = 'AIzaSyByYOzOq1SV8-UmU5N3YnNlQPvoHkNv-60';
+
+    const updateInterval = 3000;
+
+    const u = new GraphicsUpdater(
+        settings,
+        spreadsheetID,
+        worksheetName,
+        apiKey,
+        updateInterval,
+        false
+    );
+
+    u.addOperation('regex', regexOperation);
+    u.startUpdating();
+
+    const ticker = new TickerUpdater(1000);
+
+    // Update break screen images whenever M2 (team) changes
+    const teamElement = document.getElementById("team");
+
+    function updateBreakImages() {
+        const team = teamElement.textContent.trim();
+
+        if (!team) return;
+
+        document.getElementById("topimage").src =
+            `ModularPieces/Teams/${team}/Break_Screen_2.png`;
+
+        document.getElementById("botimage").src =
+            `ModularPieces/Teams/${team}/Break_Screen.png`;
+    }
+
+    const observer = new MutationObserver(updateBreakImages);
+
+    observer.observe(teamElement, {
+        childList: true,
+        characterData: true,
+        subtree: true
+    });
+
+    // Initial update
+    updateBreakImages();
+</script>
+
+</body>
+</html>

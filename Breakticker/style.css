@@ -1,0 +1,285 @@
+@font-face {
+    font-family: "OxaniumBold";
+    src: url("./fonts/Oxanium-Bold.ttf");
+}
+
+@font-face {
+    font-family: "OxaniumMedium";
+    src: url("./fonts/Oxanium-Medium.ttf");
+}
+
+@font-face {
+    font-family: "OxaniumLight";
+    src: url("./fonts/Oxanium-Light.ttf");
+}
+
+body {
+    color: white;
+    font-size: 30px;
+}
+
+.topdivstuff {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+}
+
+/* ===================== IMAGES ===================== */
+
+#topimage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 1920px;
+    height: auto;
+}
+
+#botimage {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    width: 1920px;
+    height: auto;
+}
+
+/* ===================== TITLE ===================== */
+
+#title {
+    position: absolute;
+    font-family: OxaniumBold;
+    text-transform: uppercase;
+
+    width: 1310px;
+    height: 51px;
+
+    top: 941px;
+    left: 310px;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    font-size: 80px;
+
+    box-sizing: border-box;
+
+    /* IMPORTANT FIX */
+    #title {
+    padding: 0 20px;
+    }
+}
+
+/* ===================== LOGOS ===================== */
+
+.nextteamlogos {
+    max-width: 95px;
+    max-height: 95px;
+}
+
+.teamlogos {
+    max-width: 75px;
+    max-height: 75px;
+}
+
+/* ===================== POSITIONING ===================== */
+
+.topstuff {
+    position: absolute;
+    top: 274px;
+    left: 0;
+}
+
+.midstuff {
+    position: absolute;
+    top: 520px;
+    left: 0;
+}
+
+.botstuff {
+    position: absolute;
+    top: 766px;
+    left: 0;
+}
+
+/* ===================== GAME INFO ===================== */
+
+.gamescore {
+    position: absolute;
+    top: 115px;
+    left: 107px;
+    width: 73px;
+    text-align: center;
+    font-family: OxaniumBold;
+    font-size: 35px;
+    color: #ffffff;
+    -webkit-text-stroke: #000000 1px;
+}
+
+.gametime {
+    position: absolute;
+    top: 200px;
+    left: 27px;
+    width: 239px;
+    text-align: center;
+    font-family: OxaniumBold;
+    color: #ffffff;
+    -webkit-text-stroke: #000000 1px;
+}
+
+.topround,
+.midround,
+.botround {
+    position: absolute;
+    top: 35px;
+    left: 25px;
+    width: 239px;
+    text-align: center;
+    font-family: OxaniumBold;
+    font-size: clamp(18px, 2.2vw, 37px);
+    
+    color: #ffffff;
+    -webkit-text-stroke: #000000 1px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ===================== LOGO POSITIONS ===================== */
+
+.teamlogoleft {
+    position: absolute;
+    top: 95px;
+    left: 17px;
+}
+
+.teamlogoright {
+    position: absolute;
+    top: 95px;
+    left: 196px;
+}
+
+#upnextleftlogo {
+    position: absolute;
+    top: 90px;
+    left: 17px;
+}
+
+#upnextrightlogo {
+    position: absolute;
+    top: 90px;
+    left: 230px;
+}
+
+/* ===================== TEXT BLOCKS ===================== */
+
+#upnextvs {
+    position: absolute;
+    top: 115px;
+    left: 0;
+    width: 345px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: OxaniumBold;
+    font-size: 40px;
+    color: #ffffff;
+    -webkit-text-stroke: #000000 1px;
+}
+
+#upnexttext {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 335px;
+    text-align: center;
+    font-family: OxaniumBold;
+    font-size: 45px;
+    text-transform: uppercase;
+    -webkit-text-stroke: #000000 1.2px;
+}
+
+/* ===================== RIGHT TIMER ===================== */
+
+#timezone {
+    position: absolute;
+    left: 1664px;
+    width: 250px;
+    top: 935px;
+    text-align: center;
+    
+    color: #ffffff;
+    -webkit-text-stroke: #000000 2px;
+    
+    font-family: OxaniumBold;
+    text-transform: uppercase;
+    font-size: 45px;
+    z-index: 4;
+}
+
+#tickertime {
+    position: absolute;
+    left: 1664px;
+    top: 930px;
+    width: 250px;
+
+    font-family: OxaniumBold;
+    font-size: 60px;
+    text-align: center;
+
+    color: #ffffff;
+    -webkit-text-stroke: #000000 2px;
+
+    letter-spacing: 3px;
+    z-index: 10;
+
+    transition: font-size 0.2s ease;
+}
+
+/* AM/PM smaller mode */
+#tickertime.ampm {
+    font-size: 50px;
+    top: 952px;
+    left: 1660px;
+}
+
+/* ===================== TICKER ===================== */
+
+#ticker {
+    color: white;
+    font-family: OxaniumLight;
+}
+
+/* ===================== SOCIAL ===================== */
+
+#social {
+    position: absolute;
+    top: 1025px;
+    left: -777px;
+    width: 1920px;
+    height: 50px;
+    text-align: center;
+
+    font-family: OxaniumBold;
+    font-size: 40px;   
+
+    color: #ffffff;
+    -webkit-text-stroke: #000000 2px;
+
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* ===================== ANIMATION ===================== */
+
+@keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-130%); }
+}
