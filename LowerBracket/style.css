@@ -553,7 +553,7 @@ body {
     position: absolute;
     left: 61px;
     top: -2px;
-    width: 200px;
+    width: 150px;
     font-size: 24px;
     white-space: nowrap;
     overflow: hidden;
@@ -566,7 +566,7 @@ body {
     position: absolute;
     left: 60px;
     top: 44px;
-    width: 28px;
+    width: 150px;
     font-size: 24px;
     white-space: nowrap;
     overflow: hidden;
