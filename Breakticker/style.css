@@ -143,7 +143,7 @@ body {
     width: 239px;
     text-align: center;
     font-family: OxaniumBold;
-    font-size: clamp(18px, 2.2vw, 37px);
+    font-size: clamp(18px, 2.2vw, 32px);
     
     color: #ffffff;
     -webkit-text-stroke: #000000 1px;
