@@ -1,695 +1,380 @@
-@font-face {
-    font-family: "OxaniumBold";
-    src: url("./fonts/Oxanium-Bold.ttf");
+@font-face{
+    font-family:"OxaniumBold";
+    src:url("./fonts/Oxanium-Bold.ttf");
 }
 
-@font-face {
-    font-family: "OxaniumMedium";
-    src: url("./fonts/Oxanium-Medium.ttf");
+@font-face{
+    font-family:"OxaniumMedium";
+    src:url("./fonts/Oxanium-Medium.ttf");
 }
 
-@font-face {
-    font-family: "OxaniumLight";
-    src: url("./fonts/Oxanium-Light.ttf");
+@font-face{
+    font-family:"OxaniumLight";
+    src:url("./fonts/Oxanium-Light.ttf");
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
-    width: 1920px;
-    height: 1080px;
-    overflow: hidden;
-    color: white;
-    font-family: OxaniumBold;
+body{
+    width:1920px;
+    height:1080px;
+    overflow:hidden;
+    position:relative;
+    font-family:OxaniumBold;
+    background:#111;
 }
 
-/* ===================== BACKGROUND ===================== */
-
-#topimage {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1920px;
-    height: 1080px;
-    z-index: 0;
+#topimage{
+    position:absolute;
+    left:0;
+    top:0;
+    width:1920px;
+    height:1080px;
+    object-fit:cover;
+    z-index:0;
 }
 
-/* ===================== BRACKET ===================== */
-
-.bracket {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-}
-
-/* ===================== ROUND CONTAINERS ===================== */
-
-.round {
-    position: absolute;
-}
-
-.round1 {
-    left: 108px;
-    top: 40px;
-    gap: 26px;
-}
-
-.round2 {
-    left: 420px;
-    top: 40px;
-}
-
-.round3 {
-    left: 730px;
-    top: 40px;
-}
-
-.round4 {
-    left: 1040px;
-    top: 40px;
-}
-
-.round5 {
-    left: 1350px;
-    top: 40px;
-}
-
-.round6 {
-    left: 1660px;
-    top: 40px;
-}
-
-/* ===================== TITLE ===================== */
-
-.roundtitle {
-    margin-bottom: 30px;
-    font-family: OxaniumBold;
-    font-size: 34px;
-    color: white;
-    -webkit-text-stroke: 1.4px black;
-
-    width: 180px;
-}
-
-/* ===================== MATCH CONTAINERS ===================== */
-
-#matchR { position: absolute; top: 102px; left: -40px; }
-#matchS { position: absolute; top: 218px; left: -40px; }
-#matchT { position: absolute; top: 335px; left: -40px; }
-#matchU { position: absolute; top: 451px; left: -40px; }
-#matchV { position: absolute; top: 581px; left: -40px; }
-#matchW { position: absolute; top: 698px; left: -40px; }
-#matchX { position: absolute; top: 814px; left: -40px; }
-#matchY { position: absolute; top: 930px; left: -40px; }
-
-#matchZ { position: absolute; top: 102px; left: -43px; }
-#matchAA { position: absolute; top: 218px; left: -55px; }
-#matchAB { position: absolute; top: 335px; left: -55px; }
-#matchAC { position: absolute; top: 451px; left: -55px; }
-#matchAD { position: absolute; top: 581px; left: -55px; }
-#matchAE { position: absolute; top: 698px; left: -55px; }
-#matchAF { position: absolute; top: 814px; left: -55px; }
-#matchAG { position: absolute; top: 930px; left: -55px; }
-
-#matchAH { position: absolute; top: 160px; left: -55px; }
-#matchAI { position: absolute; top: 394px; left: -55px; }
-#matchAJ { position: absolute; top: 640px; left: -55px; }
-#matchAK { position: absolute; top: 874px; left: -55px; }
-
-#matchAL { position: absolute; top: 160px; left: -55px; }
-#matchAM { position: absolute; top: 394px; left: -55px; }
-#matchAN { position: absolute; top: 640px; left: -55px; }
-#matchAO { position: absolute; top: 874px; left: -55px; }
-
-#matchAP { position: absolute; top: 277px; left: -55px; }
-#matchAQ { position: absolute; top: 755px; left: -55px; }
-
-#matchAR { position: absolute; top: 277px; left: -55px; }
-#matchAS { position: absolute; top: 755px; left: -55px; }
-
-/* ===================== ROUND 1 ===================== */
-/* ===================== MATCH ID (A, B, C...) ===================== */
-
-#R, #S, #T, #U,
-#V, #W, #X, #Y {
-    position: absolute;
-    left: 0;
-    top: 10px;
-
-    width: 28px;
-    text-align: center;
-
-    font-size: 40px;
-    color: white;
-    -webkit-text-stroke: 1px black;
-}
-
-/* ===================== BLUE TEAM ===================== */
-
-#RBlue, #SBlue, #TBlue, #UBlue,
-#VBlue, #WBlue, #XBlue, #YBlue {
-    position: absolute;
-    left: 46px;
-    top: -2px;
-
-    width: 150px;
-
-    font-size: 24px;
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    color: white;
-    -webkit-text-stroke: 1px black;
-}
-
-/* ===================== BLUE TEAM SCORE ===================== */
-#RBlueScore, #SBlueScore, #TBlueScore, #UBlueScore,
-#VBlueScore, #WBlueScore, #XBlueScore, #YBlueScore {
-    position: absolute;
-    left: 182px;
-    top: -10px;
-    text-align: center;
-
-    width: 80px;
-
-    font-size: 35px;
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    color: white;
-    -webkit-text-stroke: 1px black;
-}
-
-/* ===================== ORANGE TEAM ===================== */
-
-#ROrange, #SOrange, #TOrange, #UOrange,
-#VOrange, #WOrange, #XOrange, #YOrange {
-    position: absolute;
-    left: 46px;
-    top: 46px;
-
-    width: 150px;
-
-    font-size: 24px;
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    color: white;
-    -webkit-text-stroke: 1px black;
-}
-
-/* ===================== ORANGE TEAM SCORE ===================== */
-#ROrangeScore, #SOrangeScore, #TOrangeScore, #UOrangeScore,
-#VOrangeScore, #WOrangeScore, #XOrangeScore, #YOrangeScore {
-    position: absolute;
-    left: 182px;
-    top: 38px;
-    text-align: center;
-
-    width: 80px;
-
-    font-size: 35px;
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    color: white;
-    -webkit-text-stroke: 1px black;
+.bracket{
+    position:absolute;
+    left:0;
+    top:0;
+    width:1920px;
+    height:1080px;
+    z-index:10;
 }
 
 
-/* ===================== ROUND 2 ===================== */
-/* ===================== MATCH ID (A, B, C...) ===================== */
-#Z, #AA, #AB, #AC,
-#AD, #AE, #AF, #AG {
-    position: absolute;
-    left: 0;
-    top: 10px;
+/* ===========================
+   ROUNDS
+=========================== */
 
-    width: 28px;
-    text-align: center;
-
-    font-size: 40px;
-    color: white;
-    -webkit-text-stroke: 1px black;
+.round{
+    position:absolute;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    width:250px;
 }
 
-/* ===================== BLUE TEAM ===================== */
-#ZBlue {
-    position: absolute;
-    left: 47px;
-    top: -2px;
-
-    width: 150px;
-
-    font-size: 24px;
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    color: white;
-    -webkit-text-stroke: 1px black;
+.round1{
+    left:95px;
+    top:223px;
+    --match-gap:2px;
 }
 
-#AABlue, #ABBlue, #ACBlue, #ADBlue, #AEBlue, #AFBlue, #AGBlue {
-    position: absolute;
-    left: 58px;
-    top: -2px;
-
-    width: 150px;
-
-    font-size: 24px;
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    color: white;
-    -webkit-text-stroke: 1px black;
+.round2{
+    left:395px;
+    top:189px;
+    --match-gap:2px;
 }
 
-#ZBlueScore {
-    position: absolute;
-    left: 182px;
-    top: -10px;
-    text-align: center;
-
-    width: 80px;
-
-    font-size: 35px;
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    color: white;
-    -webkit-text-stroke: 1px black;
+.round3{
+    left:693px;
+    top:154px;
+    --match-gap:2px;
 }
 
-#AABlueScore, #ABBlueScore, #ACBlueScore, #ADBlueScore, #AEBlueScore, #AFBlueScore, #AGBlueScore {
-    position: absolute;
-    left: 194px;
-    top: -10px;
-    text-align: center;
-
-    width: 80px;
-
-    font-size: 35px;
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    color: white;
-    -webkit-text-stroke: 1px black;
+.round4{
+    left:991px;
+    top:134px;
+    --match-gap:2px;
 }
 
-/* ===================== ORANGE TEAM ===================== */
-#ZOrange {
-    position: absolute;
-    left: 46px;
-    top: 46px;
-
-    width: 150px;
-
-    font-size: 24px;
-
-    white-space: nowrap;
-    overflow: hidden;
-
-    color: white;
-    -webkit-text-stroke: 1px black;
-}
-
-#AAOrange, #ABOrange, #ACOrange, #ADOrange, #AEOrange, #AFOrange, #AGOrange {
-    position: absolute;
-    left: 58px;
-    top: 46px;
-
-    width: 150px;
-
-    font-size: 24px;
-
-    white-space: nowrap;
-    overflow: hidden;
-
-    color: white;
-    -webkit-text-stroke: 1px black;
-}
-
-#ZOrangeScore {
-    position: absolute;
-    left: 182px;
-    top: 38px;
-    text-align: center;
-
-    width: 80px;
-
-    font-size: 35px;
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    color: white;
-    -webkit-text-stroke: 1px black;
-}
-
-#AAOrangeScore, #ABOrangeScore, #ACOrangeScore, #ADOrangeScore, #AEOrangeScore, #AFOrangeScore, #AGOrangeScore {
-    position: absolute;
-    left: 194px;
-    top: 38px;
-    text-align: center;
-
-    width: 80px;
-
-    font-size: 35px;
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    color: white;
-    -webkit-text-stroke: 1px black;
+.round5{
+    left:1290px;
+    top:290px;
+    --match-gap:2px;
 }
 
 
-/* ===================== ROUND 3 ===================== */
+/* Final block after Round 5 */
 
-#AH, #AJ, #AK {
-    position: absolute;
-    left: 1px;
-    top: 10px;
-    width: 28px;
-    text-align: center;
-    font-size: 40px;
-    color: white;
-    -webkit-text-stroke: 1px black;
-}
-
-#AI {
-    position: absolute;
-    left: 8px;
-    top: 10px;
-    width: 28px;
-    text-align: center;
-    font-size: 40px;
-    color: white;
-    -webkit-text-stroke: 1px black;
-}
-
-#AHBlue, #AIBlue, #AJBlue, #AKBlue {
-    position: absolute;
-    left: 60px;
-    top: -2px;
-    width: 150px;
-    font-size: 24px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: white;
-    -webkit-text-stroke: 1px black;
-}
-
-#AHOrange, #AIOrange, #AJOrange, #AKOrange {
-    position: absolute;
-    left: 60px;
-    top: 45px;
-    width: 150px;
-    font-size: 24px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: white;
-    -webkit-text-stroke: 1px black;
-}
-
-#AHBlueScore, #AIBlueScore, #AJBlueScore, #AKBlueScore {
-    position: absolute;
-    left: 195px;
-    top: -10px;
-    width: 80px;
-    font-size: 35px;
-    text-align: center;
-    color: white;
-    -webkit-text-stroke: 1px black;
-}
-
-#AHOrangeScore, #AIOrangeScore, #AJOrangeScore, #AKOrangeScore {
-    position: absolute;
-    left: 195px;
-    top: 38px;
-    width: 80px;
-    font-size: 35px;
-    text-align: center;
-    color: white;
-    -webkit-text-stroke: 1px black;
+.final-stage{
+    left:1588px;
+    top:426px;
 }
 
 
-/* ===================== ROUND 4 ===================== */
+/* ===========================
+   ROUND TITLES
+=========================== */
 
-#AL, #AN, #AO {
-    position: absolute;
-    left: 5px;
-    top: 12px;
-    width: 40px;
-    text-align: center;
-    font-size: 35px;
-    color: white;
-    -webkit-text-stroke: 1px black;
-}
+.roundtitle{
+    color:white;
+    font-size:32px;
+    margin-bottom:12px;
+    text-align:center;
+    text-transform:uppercase;
 
-#AM {
-    position: absolute;
-    left: 2px;
-    top: 12px;
-    width: 40px;
-    text-align: center;
-    font-size: 35px;
-    color: white;
-    -webkit-text-stroke: 1px black;
-}
+    -webkit-text-stroke:2px black;
 
-/* BLUE TEAM */
-#ALBlue, #AMBlue, #ANBlue, #AOBlue {
-    position: absolute;
-    left: 60px;
-    top: -2px;
-    width: 150px;
-    font-size: 24px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: white;
-    -webkit-text-stroke: 1px black;
-}
-
-/* ORANGE TEAM */
-#ALOrange, #AMOrange, #ANOrange, #AOOrange {
-    position: absolute;
-    left: 60px;
-    top: 46px;
-    width: 150px;
-    font-size: 24px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: white;
-    -webkit-text-stroke: 1px black;
-}
-
-/* BLUE SCORE */
-#ALBlueScore, #AMBlueScore, #ANBlueScore, #AOBlueScore {
-    position: absolute;
-    left: 196px;
-    top: -10px;
-    width: 80px;
-    font-size: 35px;
-    text-align: center;
-    color: white;
-    -webkit-text-stroke: 1px black;
-}
-
-/* ORANGE SCORE */
-#ALOrangeScore, #AMOrangeScore, #ANOrangeScore, #AOOrangeScore {
-    position: absolute;
-    left: 196px;
-    top: 38px;
-    width: 80px;
-    font-size: 35px;
-    text-align: center;
-    color: white;
-    -webkit-text-stroke: 1px black;
+    text-shadow:
+        2px 2px black,
+        -2px 2px black,
+        2px -2px black,
+        -2px -2px black;
 }
 
 
-/* ===================== ROUND 5 ===================== */
+/* ===========================
+   MATCH
+=========================== */
 
-#AP, #AQ {
-    position: absolute;
-    left: 3px;
-    top: 10px;
-    width: 28px;
-    text-align: center;
-    font-size: 40px;
-    color: white;
-    -webkit-text-stroke: 1px black;
-}
-
-#APBlue, #AQBlue {
-    position: absolute;
-    left: 61px;
-    top: -2px;
-    width: 200px;
-    font-size: 24px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: white;
-    -webkit-text-stroke: 1px black;
-}
-
-#APOrange, #AQOrange {
-    position: absolute;
-    left: 60px;
-    top: 44px;
-    width: 200px;
-    font-size: 24px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: white;
-    -webkit-text-stroke: 1px black;
-}
-
-#APBlueScore, #AQBlueScore {
-    position: absolute;
-    left: 196px;
-    top: -10px;
-    width: 80px;
-    font-size: 35px;
-    text-align: center;
-    color: white;
-    -webkit-text-stroke: 1px black;
-}
-
-#APOrangeScore, #AQOrangeScore {
-    position: absolute;
-    left: 196px;
-    top: 37px;
-    width: 80px;
-    font-size: 35px;
-    text-align: center;
-    color: white;
-    -webkit-text-stroke: 1px black;
+.match{
+    position:relative;
+    width:250px;
+    height:80px;
+    margin-bottom:var(--match-gap);
 }
 
 
-/* ===================== ROUND 6 ===================== */
+/* ===========================
+   LOGOS
+=========================== */
 
-#AR, #AS {
-    position: absolute;
-    left: 8px;
-    top: 10px;
-    width: 28px;
-    text-align: center;
-    font-size: 40px;
-    color: white;
-    -webkit-text-stroke: 1px black;
+.logo{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:60px;
+    height:60px;
+    object-fit:contain;
+    pointer-events:none;
 }
 
-#ARBlue, #ASBlue {
-    position: absolute;
-    left: 65px;
-    top: -2px;
-    width: 150px;
-    font-size: 24px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: white;
-    -webkit-text-stroke: 1px black;
+.bluelogo{
+    left:30px;
 }
 
-#AROrange, #ASOrange {
-    position: absolute;
-    left: 65px;
-    top: 45px;
-    width: 150px;
-    font-size: 24px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: white;
-    -webkit-text-stroke: 1px black;
+.orangelogo{
+    right:20px;
 }
 
-#ARBlueScore, #ASBlueScore {
-    position: absolute;
-    left: 200px;
-    top: -10px;
-    width: 80px;
-    font-size: 35px;
-    text-align: center;
-    color: white;
-    -webkit-text-stroke: 1px black;
+.logo[src=""],
+.logo:not([src]){
+    display:none;
+}
+
+.qualified-logo[src=""],
+.qualified-logo:not([src]),
+.eliminated-logo[src=""],
+.eliminated-logo:not([src]){
+    visibility:hidden;
 }
 
 
-#AROrangeScore, #ASOrangeScore {
-    position: absolute;
-    left: 200px;
-    top: 38px;
-    width: 80px;
-    font-size: 35px;
-    text-align: center;
-    color: white;
-    -webkit-text-stroke: 1px black;
+/* ===========================
+   SCORE
+=========================== */
+
+.score{
+    position:absolute;
+    left:131px;
+    top:50%;
+    transform:translate(-50%,-50%);
+    width:50px;
+    text-align:center;
+    color:white;
+    font-family:OxaniumBold;
+    font-size:22px;
+    line-height:1;
+    -webkit-text-stroke:1px black;
 }
 
 
-/* ===================== TICKER ===================== */
+/* ===========================
+   QUALIFIED / ELIMINATED
+=========================== */
 
-.marquee-container {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 1920px;
-    overflow: hidden;
-    z-index: 5;
+.qualified,
+.eliminated{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:55px;
+    width:250px;
 }
 
-.marquee {
-    white-space: nowrap;
+.qualified-logo,
+.eliminated-logo{
+    width:60px;
+    height:60px;
+    object-fit:contain;
 }
 
-#ticker {
-    font-family: OxaniumLight;
-    font-size: 34px;
-    color: white;
+.top-qualified{
+    margin-bottom:76px;
 }
 
-/* ===================== ANIMATION ===================== */
+.bottom-eliminated{
+    margin-top:77px;
+}
 
-@keyframes marquee {
-    from {
-        transform: translateX(0%);
+
+/* ===========================
+   QUAL / ELIM CUSTOM SPACING
+=========================== */
+
+/* Controls space between logos inside each group */
+.qualified,
+.eliminated{
+    --qual-elim-gap:55px;
+    gap:var(--qual-elim-gap);
+}
+
+
+/* Controls distance from the round title */
+.round4 .top-qualified,
+.round5 .top-qualified,
+.final-stage .top-qualified{
+    --qual-top-margin:0px;
+    margin-top:var(--qual-top-margin);
+}
+
+
+/* Controls distance from matches to qualified logos */
+.round4 .top-qualified {
+    --qual-bottom-space:76px;
+    margin-bottom:var(--qual-bottom-space);
+}
+
+/* Controls distance from matches to eliminated logos */
+.round4 .bottom-eliminated {
+    --elim-top-space:77px;
+    margin-top:var(--elim-top-space);
+}
+
+
+/* ===========================
+   R5 QUAL / ELIM SPACING ONLY
+=========================== */
+
+/* Space between R5 qualified logos and the matches */
+.round5 .top-qualified{
+    margin-bottom:76px; /* change this */
+}
+
+/* Space between R5 matches and eliminated logos */
+.round5 .bottom-eliminated{
+    margin-top:77px; /* change this */
+}
+
+/* Space between the R5 qual/elim logos themselves */
+.round5 .qualified,
+.round5 .eliminated{
+    margin-right: -11px;
+    gap:17px; /* change this */
+}
+
+
+/* Controls final-stage separately */
+.final-stage .top-qualified{
+    --final-qual-space:150px;
+    margin-bottom:var(--final-qual-space);
+}
+
+.final-stage .bottom-eliminated{
+    --final-elim-space:150px;
+    margin-top:var(--final-elim-space);
+}
+
+
+/* ===========================
+   FINAL BLOCK SPACING
+=========================== */
+
+.final-stage .top-qualified{
+    margin-top: 20px;
+    margin-right: -10px;
+    gap:17px;
+}
+
+.final-stage .bottom-eliminated{
+    margin-top: -62px;
+    margin-right: -9px;
+    gap:17px;
+}
+
+
+/* ===========================
+   SPECIAL BRACKET GAPS
+=========================== */
+
+/* Round 2:
+   4 matches
+   gap
+   4 matches
+*/
+
+.round2 .match:nth-of-type(5){
+    margin-top:67px;
+}
+
+
+/* Round 3:
+   2 matches
+   gap
+   2 matches
+   gap
+   4 matches
+*/
+
+.round3 .match:nth-of-type(3){
+    margin-top:67px;
+}
+
+.round3 .match:nth-of-type(7){
+    margin-top:67px;
+}
+
+
+/* Round 4:
+   3 matches
+   gap
+   3 matches
+*/
+
+.round4 .match:nth-of-type(5){
+    margin-top:67px;
+}
+
+
+/* ===========================
+   TICKER
+=========================== */
+
+.marquee-container{
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:1920px;
+    overflow:hidden;
+    z-index:20;
+    padding:8px 0;
+}
+
+.marquee{
+    display:inline-block;
+    white-space:nowrap;
+    animation:marquee 20s linear infinite;
+}
+
+#ticker{
+    color:white;
+    font-family:OxaniumLight;
+    font-size:32px;
+}
+
+@keyframes marquee{
+    from{
+        transform:translateX(1920px);
     }
 
-    to {
-        transform: translateX(-130%);
+    to{
+        transform:translateX(-100%);
     }
 }
